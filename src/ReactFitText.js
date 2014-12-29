@@ -1,4 +1,5 @@
-"use strict";
+'use strict';
+
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 
@@ -26,7 +27,8 @@ module.exports = React.createClass({
   componentDidMount: function() {
     var width = this.refs.fitTextContainer.getDOMNode().offsetWidth;
     this.setState({width: width});
-    document.body.onresize = this._onBodyResize;
+    // document.body.onresize = this._onBodyResize;
+    window.addEventListener("resize", this._onBodyResize);
   },
 
   _onBodyResize: function() {
