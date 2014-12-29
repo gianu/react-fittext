@@ -2,8 +2,9 @@
 require("../styles/index.styl");
 
 var React = require("react/addons");
-var ReactFitTextBase = require("../../src");
-var {ReactFitText} = ReactFitTextBase;
+// var ReactFitTextBase = require("../../src");
+// var {ReactFitText} = ReactFitTextBase;
+var ReactFitText = require('../../src/ReactFitText');
 
 var Body = React.createClass({
   render: function() {
