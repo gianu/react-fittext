@@ -9,7 +9,7 @@ This component is 100% jQuery Free.
 Simply wrap your text component inside <ReactFitText>
 
 ```javascript
-// In you React component
+// In your React component
 
 var ReactFitText = require('react-fittext');
 ...
