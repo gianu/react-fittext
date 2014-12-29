@@ -9,6 +9,11 @@ This component is 100% jQuery Free.
 Simply wrap your text component inside <ReactFitText>
 
 ```javascript
+// In you React component
+
+var ReactFitText = require('react-fittext');
+...
+
 <ReactFitText>
   <h2>Testing React Fittext</h2>
 </ReactFitText>
@@ -20,7 +25,7 @@ and you're good to go!
 
  If you can send the compressor attribute to the component to modify how the text adapts it size.
 
- ## Issues / PR
+## Issues / PR
 
  If you found any issue with this componente, please [report it](https://github.com/gianu/react-fittext/issues).
 
