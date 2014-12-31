@@ -8113,7 +8113,7 @@
 
 	"use strict";
 
-	var emptyObject = __webpack_require__(95);
+	var emptyObject = __webpack_require__(93);
 	var invariant = __webpack_require__(40);
 
 	/**
@@ -8271,11 +8271,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(93);
+	var CallbackQueue = __webpack_require__(94);
 	var PooledClass = __webpack_require__(41);
 	var ReactCurrentOwner = __webpack_require__(17);
 	var ReactPerf = __webpack_require__(27);
-	var Transaction = __webpack_require__(94);
+	var Transaction = __webpack_require__(95);
 
 	var assign = __webpack_require__(31);
 	var invariant = __webpack_require__(40);
@@ -11387,7 +11387,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(44);
-	var Transaction = __webpack_require__(94);
+	var Transaction = __webpack_require__(95);
 
 	var assign = __webpack_require__(31);
 	var emptyFunction = __webpack_require__(90);
@@ -13581,9 +13581,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(41);
-	var CallbackQueue = __webpack_require__(93);
+	var CallbackQueue = __webpack_require__(94);
 	var ReactPutListenerQueue = __webpack_require__(135);
-	var Transaction = __webpack_require__(94);
+	var Transaction = __webpack_require__(95);
 
 	var assign = __webpack_require__(31);
 	var emptyFunction = __webpack_require__(90);
@@ -13691,6 +13691,32 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
+	 * @providesModule emptyObject
+	 */
+
+	"use strict";
+
+	var emptyObject = {};
+
+	if (false) {
+	  Object.freeze(emptyObject);
+	}
+
+	module.exports = emptyObject;
+
+
+/***/ },
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
 	 * @providesModule CallbackQueue
 	 */
 
@@ -13782,7 +13808,7 @@
 
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14022,32 +14048,6 @@
 	};
 
 	module.exports = Transaction;
-
-
-/***/ },
-/* 95 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule emptyObject
-	 */
-
-	"use strict";
-
-	var emptyObject = {};
-
-	if (false) {
-	  Object.freeze(emptyObject);
-	}
-
-	module.exports = emptyObject;
 
 
 /***/ },
@@ -16025,12 +16025,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(93);
+	var CallbackQueue = __webpack_require__(94);
 	var PooledClass = __webpack_require__(41);
 	var ReactBrowserEventEmitter = __webpack_require__(58);
 	var ReactInputSelection = __webpack_require__(110);
 	var ReactPutListenerQueue = __webpack_require__(135);
-	var Transaction = __webpack_require__(94);
+	var Transaction = __webpack_require__(95);
 
 	var assign = __webpack_require__(31);
 
@@ -17550,7 +17550,7 @@
 
 	var ExecutionEnvironment = __webpack_require__(66);
 
-	var getNodeForCharacterOffset = __webpack_require__(146);
+	var getNodeForCharacterOffset = __webpack_require__(147);
 	var getTextContentAccessor = __webpack_require__(112);
 
 	/**
@@ -17846,7 +17846,7 @@
 
 	"use strict";
 
-	var Danger = __webpack_require__(147);
+	var Danger = __webpack_require__(146);
 	var ReactMultiChildUpdateTypes = __webpack_require__(88);
 
 	var getTextContentAccessor = __webpack_require__(112);
@@ -18158,85 +18158,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * @providesModule getNodeForCharacterOffset
-	 */
-
-	"use strict";
-
-	/**
-	 * Given any node return the first leaf node without children.
-	 *
-	 * @param {DOMElement|DOMTextNode} node
-	 * @return {DOMElement|DOMTextNode}
-	 */
-	function getLeafNode(node) {
-	  while (node && node.firstChild) {
-	    node = node.firstChild;
-	  }
-	  return node;
-	}
-
-	/**
-	 * Get the next sibling within a container. This will walk up the
-	 * DOM if a node's siblings have been exhausted.
-	 *
-	 * @param {DOMElement|DOMTextNode} node
-	 * @return {?DOMElement|DOMTextNode}
-	 */
-	function getSiblingNode(node) {
-	  while (node) {
-	    if (node.nextSibling) {
-	      return node.nextSibling;
-	    }
-	    node = node.parentNode;
-	  }
-	}
-
-	/**
-	 * Get object describing the nodes which contain characters at offset.
-	 *
-	 * @param {DOMElement|DOMTextNode} root
-	 * @param {number} offset
-	 * @return {?object}
-	 */
-	function getNodeForCharacterOffset(root, offset) {
-	  var node = getLeafNode(root);
-	  var nodeStart = 0;
-	  var nodeEnd = 0;
-
-	  while (node) {
-	    if (node.nodeType == 3) {
-	      nodeEnd = nodeStart + node.textContent.length;
-
-	      if (nodeStart <= offset && nodeEnd >= offset) {
-	        return {
-	          node: node,
-	          offset: offset - nodeStart
-	        };
-	      }
-
-	      nodeStart = nodeEnd;
-	    }
-
-	    node = getLeafNode(getSiblingNode(node));
-	  }
-	}
-
-	module.exports = getNodeForCharacterOffset;
-
-
-/***/ },
-/* 147 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
 	 * @providesModule Danger
 	 * @typechecks static-only
 	 */
@@ -18411,6 +18332,85 @@
 	};
 
 	module.exports = Danger;
+
+
+/***/ },
+/* 147 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule getNodeForCharacterOffset
+	 */
+
+	"use strict";
+
+	/**
+	 * Given any node return the first leaf node without children.
+	 *
+	 * @param {DOMElement|DOMTextNode} node
+	 * @return {DOMElement|DOMTextNode}
+	 */
+	function getLeafNode(node) {
+	  while (node && node.firstChild) {
+	    node = node.firstChild;
+	  }
+	  return node;
+	}
+
+	/**
+	 * Get the next sibling within a container. This will walk up the
+	 * DOM if a node's siblings have been exhausted.
+	 *
+	 * @param {DOMElement|DOMTextNode} node
+	 * @return {?DOMElement|DOMTextNode}
+	 */
+	function getSiblingNode(node) {
+	  while (node) {
+	    if (node.nextSibling) {
+	      return node.nextSibling;
+	    }
+	    node = node.parentNode;
+	  }
+	}
+
+	/**
+	 * Get object describing the nodes which contain characters at offset.
+	 *
+	 * @param {DOMElement|DOMTextNode} root
+	 * @param {number} offset
+	 * @return {?object}
+	 */
+	function getNodeForCharacterOffset(root, offset) {
+	  var node = getLeafNode(root);
+	  var nodeStart = 0;
+	  var nodeEnd = 0;
+
+	  while (node) {
+	    if (node.nodeType == 3) {
+	      nodeEnd = nodeStart + node.textContent.length;
+
+	      if (nodeStart <= offset && nodeEnd >= offset) {
+	        return {
+	          node: node,
+	          offset: offset - nodeStart
+	        };
+	      }
+
+	      nodeStart = nodeEnd;
+	    }
+
+	    node = getLeafNode(getSiblingNode(node));
+	  }
+	}
+
+	module.exports = getNodeForCharacterOffset;
 
 
 /***/ },
