@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/gianu/react-fittext/issues"
   },
-  "homepage": "https://github.com/gianu/react-fittext",
+  "homepage": "http://softwarepsychonaut.com/react-fittext",
   "devDependencies": {
     "css-loader": "^0.9.0",
     "expose-loader": "^0.5.3",
