@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -o nounset
+set -o errexit
+
+git_status ="$(git status 2> /dev/null)"
+
+if [[ ! ${git_status} =~ "working directory clean" ]]; then
+  echo "You still have changes in your current branch. Commit everything before publishing."
+  exit 1
+fi
+
+git fetch 2> /dev/null
+git checkougt gh-pages
+git pull
+mv public/* .
+git add -A
+git commit -m "Site update"
+git push origin gh-pages
+git checkout -
+
+echo "Done publishing!"
