@@ -36,6 +36,10 @@ module.exports = React.createClass({
     this._onBodyResize();
   },
 
+  componentWillUnmount: function() {
+    window.removeEventListener("resize", this._onBodyResize);
+  },
+
   _onBodyResize: function() {
     var element = this.getDOMNode();
     var width = element.offsetWidth;
