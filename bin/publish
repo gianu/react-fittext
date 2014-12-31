@@ -13,6 +13,7 @@ fi
 git fetch 2> /dev/null
 git checkout gh-pages
 git pull
+rm -rf assets
 mv public/* .
 git add -A
 git commit -m "Site update"
