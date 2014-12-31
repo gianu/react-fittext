@@ -60,3 +60,7 @@ gulp.task('webpack:dev-server', function(callback) {
 gulp.task('dev', function(callback) {
   runSequence('webpack:build', 'copy-vendor', 'copy-examples', 'webpack:dev-server', callback);
 });
+
+gulp.task('prepare-publish', function(callback){
+  runSequence('webpack:build', 'copy-vendor', 'copy-examples', callback);
+});
