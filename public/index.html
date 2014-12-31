@@ -1,3 +1,37 @@
 <!DOCTYPE html>
-<title>ReactFitText Test Page</title>
-<script type="text/javascript" src="assets/bundle.js" async></script>
+<html>
+  <head>
+    <title>ReactFitText Test Page</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href='/assets/prism.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class="container">
+    <header class="js-fittext">
+    </header>
+    <p>
+      This component is a port of <a href="https://github.com/davatron5000/FitText.js">FitText</a>.
+    </p>
+    <section id="features">
+      <p>FitText make font-sizes flexible. Use this plugin on your fluid or responsive layout to achieve scalable headlines that fill the width of a parent element.</p>
+      <p>This port is 100% jQuery free, you only need React to use it.</p>
+    </section>
+    <section id="example">
+      <h2>Usage</h2>
+      <p>If you want to use this component on your React project you only need to add react-fittext to your dependencies</p>
+      <pre>
+        <code class="language-bash">npm install react-fittext --save</code>
+      </pre>
+      <p>There is an excelent use example in this very same page. To use React-Fittext on the title and subtitle of this page you only need to do this:</p>
+      <pre data-src="/assets/examples/index.js"></pre>
+    </section>
+    <footer>
+      <p>React-FitText is brought to you by <a href="http://softwarepsychonaut.com">gianu</a> (<a href="http://www.twitter.com/sgianazza">@sgianazza</a>)</p>
+      <p>The Original jQuery Plugin is brought to you by <a href="http://paravelinc.com">Paravel</a></p>
+    </footer>
+  </div>
+  <script type="text/javascript" src="assets/bundle.js" async></script>
+  <script src="/assets/prism.js"></script>
+  </body>
+</html>

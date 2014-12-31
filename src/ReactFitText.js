@@ -1,3 +1,14 @@
+/*
+ * React FitText v0.0.3
+ * https://github.com/gianu/react-fittext
+ *
+ * A port of the jQuery plugin: http://github.com/davatron5000/FitText.js
+ *
+ * Copyright 2014, Sergio Rafael Gianazza http://softwarepsychonaut.com
+ *
+ * Released under the MIT license
+ * http://gianu.mit-license.org
+ */
 'use strict';
 
 var React = require('react');
@@ -7,7 +18,9 @@ module.exports = React.createClass({
   displayName: 'ReactFitText',
 
   propTypes: {
-    compressor: ReactPropTypes.number
+    compressor: ReactPropTypes.number,
+    minFontSize: ReactPropTypes.number,
+    maxFontSize: ReactPropTypes.number
   },
 
   getDefaultProps: function() {
@@ -18,31 +31,19 @@ module.exports = React.createClass({
     };
   },
 
-  getInitialState: function() {
-    return {
-      width: 920
-    }
-  },
-
   componentDidMount: function() {
-    var width = this.refs.fitTextContainer.getDOMNode().offsetWidth;
-    this.setState({width: width});
-    // document.body.onresize = this._onBodyResize;
     window.addEventListener("resize", this._onBodyResize);
+    this._onBodyResize();
   },
 
   _onBodyResize: function() {
-    var width = this.refs.fitTextContainer.getDOMNode().offsetWidth;
-    this.setState({width: width});
+    var element = this.getDOMNode();
+    var width = element.offsetWidth;
+    var fontSize = Math.max(Math.min((width / (this.props.compressor*10)), parseFloat(this.props.maxFontSize)), parseFloat(this.props.minFontSize)) + 'px';
+    element.style.fontSize = fontSize;
   },
 
   render: function() {
-    var divStyle = {
-      'font-size': Math.max(Math.min((this.state.width / (this.props.compressor*10)), parseFloat(this.props.maxFontSize)), parseFloat(this.props.minFontSize))
-    };
-
-    return <div ref='fitTextContainer' style={divStyle}>
-              {this.props.children}
-           </div>;
+    return this.props.children;
   }
 });

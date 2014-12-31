@@ -7,8 +7,6 @@ var Path = require("path"),
     IS_PRODUCTION = "production" === process.env.NODE_ENV,
     JSX_WITH_HOT_LOEADERS = ["react-hot-loader", "jsx-loader?harmony"],
     CSS_LOADER = "style-loader!css-loader?root=../",
-    // SCSS_LOADER = "style-loader!css-loader?root=../!sass-loader?includePaths[]=" +
-    //     Path.resolve(__dirname, "../bower_components/bootstrap-sass-official/assets/stylesheets");
 
 webpackConfig = module.exports = {
   entry: "./client/scripts/index.js",
@@ -22,9 +20,9 @@ webpackConfig = module.exports = {
       { test: require.resolve("react/addons"), loader: "expose-loader?React" },
       { test: /\.js(x?)$/, loaders: JSX_WITH_HOT_LOEADERS },
       { test: /\.jpg$/, loader: "file-loader" },
+      { test: /\.png$/, loader: "url-loader?prefix=/public/&limit=10000&mimetype=image/png"},
       { test: /\.css$/, loader: CSS_LOADER },
       { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader'},
-      // { test: /\.scss$/, loader: SCSS_LOADER },
     ]
   },
   plugins: [

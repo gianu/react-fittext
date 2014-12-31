@@ -11,6 +11,15 @@ gulp.task('build', function(callback) {
     .pipe(gulp.dest(__dirname + '/lib'));
 });
 
+gulp.task('copy-examples', function() {
+  gulp.src([__dirname + '/client/scripts/index.js'])
+      .pipe(gulp.dest(__dirname + '/public/assets/examples'));
+});
+
+gulp.task('copy-vendor', function() {
+  gulp.src([__dirname + '/client/vendor/**/*'])
+      .pipe(gulp.dest(__dirname + '/public/assets'));
+});
 
 gulp.task('webpack:build', function(callback) {
   var myConfig = Object.create(require('./client/webpack.config'));
@@ -49,5 +58,5 @@ gulp.task('webpack:dev-server', function(callback) {
 });
 
 gulp.task('dev', function(callback) {
-  runSequence('webpack:build', 'webpack:dev-server', callback);
+  runSequence('webpack:build', 'copy-vendor', 'copy-examples', 'webpack:dev-server', callback);
 });
