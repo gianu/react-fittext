@@ -24,9 +24,13 @@ var ReactFitText = require('react-fittext');
 and you're good to go!
 
 If you want to see a live demo of this component, you can [check the homepage](http://softwarepsychonaut.com/react-fittext).
-### Parameters
 
- If you can send the compressor attribute to the component to modify how the text adapts it size.
+### Parameters
+ There are few options you can send to the component to modify it default behaviour:
+
+ * __compressor__: you can tweak this variable to increase / decrase the font-size. Default is 1.
+ * __minFontSize__: the minimun font size (in px) this component should use.
+ * __maxFontSize__: the maximum font size (in px) this component should use.
 
 ## Issues / PR
 
