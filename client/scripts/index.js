@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 require("../styles/index.styl");
 
 var React = require("react");
@@ -14,7 +14,7 @@ var Body = React.createClass({
         <p className="download">
           A React component for inflating web type
           <a className="download__link" href="http://github.com/gianu/react-fittext">
-            Fork it from Github
+            Fork it on Github
           </a>
         </p>
       </ReactFitText>

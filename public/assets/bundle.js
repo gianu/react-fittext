@@ -46,7 +46,7 @@
 
 	var __HUA = (function () { var React = __webpack_require__(3); var getHotUpdateAPI = __webpack_require__(1); return getHotUpdateAPI(React, "index.js", module.id); })(); if (false) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); module.hot.dispose(function () { var nextTick = require("/Users/gianu/work/react-fittext/node_modules/react-hot-loader/node_modules/next-tick/index.js"); nextTick(__HUA.updateMountedInstances); }); }
 
-	"use strict";
+	'use strict';
 	__webpack_require__(4);
 
 	var React = __webpack_require__(3);
@@ -62,7 +62,7 @@
 	        React.createElement("p", {className: "download"}, 
 	          "A React component for inflating web type", 
 	          React.createElement("a", {className: "download__link", href: "http://github.com/gianu/react-fittext"}, 
-	            "Fork it from Github"
+	            "Fork it on Github"
 	          )
 	        )
 	      )
@@ -190,7 +190,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
-	exports.push([module.id, "body {\n  top: 0;\n  margin: 0;\n  padding: 0;\n  background: #c44032;\n  color: #f4f1de;\n  font-size: 100%;\n  font-family: \"Montserrat\", 'Arial', 'san-serif';\n}\nheader {\n  margin: 3.5% 0 4%;\n}\nh1 {\n  text-align: center;\n  text-indent: -0.12em;\n  color: #faf1de;\n  font-family: \"Arvo\", 'sans-serif';\n  font-weight: 900;\n  display: inline-block;\n  margin: 0 auto;\n  line-height: 1;\n  width: 100%;\n  text-shadow: #863027 0.01em 0.01em 0, #863027 0.02em 0.02em 0, #863027 0.03em 0.03em 0, #863027 0.04em 0.04em 0, #863027 0.05em 0.05em 0, #863027 0.06em 0.06em 0, #863027 0.07em 0.07em 0, #863027 0.08em 0.08em 0, #863027 0.09em 0.09em 0, #863027 0.1em 0.1em 0;\n}\na {\n  color: #f4f1de;\n}\np {\n  font-size: 1.2em;\n}\nfooter {\n  border-top: 0.12em solid #f4f1de;\n  padding-top: 2%;\n  margin-top: 3%;\n  display: block;\n  font-size: 0.8em;\n}\n.container {\n  width: 75%;\n  margin: 0 auto;\n}\n.download {\n  font-family: \"Arvo\", 'sans-serif';\n  text-align: left;\n  margin-bottom: 0px;\n}\n.download a {\n  text-decoration: none;\n}\n.download__link {\n  padding: 0.3em 0.8em;\n  background: url("+__webpack_require__(34)+") no-repeat;\n  -webkit-background-size: 100%;\n  -moz-background-size: 100%;\n  background-size: 100%;\n  margin-left: 0.4em;\n  -webkit-transition: margin 0.15s ease-out;\n  -moz-transition: margin 0.15s ease-out;\n  -o-transition: margin 0.15s ease-out;\n  -ms-transition: margin 0.15s ease-out;\n  transition: margin 0.15s ease-out;\n  text-decoration: none;\n}\n.download__link:hover {\n  color: #f4f1de;\n  margin-left: 0.6em;\n  margin-right: -0.2em;\n}\npre {\n  font-family: \"Courier 10 Pitch\", Courier, monospace;\n  font-size: 95%;\n  line-height: 140%;\n  white-space: pre;\n  white-space: pre-wrap;\n  white-space: -moz-pre-wrap;\n  white-space: -o-pre-wrap;\n}\ncode {\n  font-family: Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n  font-size: 95%;\n  line-height: 140%;\n  white-space: pre;\n  white-space: pre-wrap;\n  white-space: -moz-pre-wrap;\n  white-space: -o-pre-wrap;\n  background: #faf8f0;\n}\n#content code {\n  display: block;\n  padding: 0.5em 1em;\n  border: 1px solid #bebab0;\n}\n", ""]);
+	exports.push([module.id, "body {\n  top: 0;\n  margin: 0;\n  padding: 0;\n  background: #c44032;\n  color: #f4f1de;\n  font-size: 100%;\n  font-family: \"Montserrat\", 'Arial', 'san-serif';\n}\nheader {\n  margin: 3.5% 0 4%;\n}\nh1 {\n  text-align: center;\n  text-indent: -0.12em;\n  color: #faf1de;\n  font-family: \"Arvo\", 'sans-serif';\n  font-weight: 900;\n  display: inline-block;\n  margin: 0 auto;\n  line-height: 1;\n  width: 100%;\n  text-shadow: #863027 0.01em 0.01em 0, #863027 0.02em 0.02em 0, #863027 0.03em 0.03em 0, #863027 0.04em 0.04em 0, #863027 0.05em 0.05em 0, #863027 0.06em 0.06em 0, #863027 0.07em 0.07em 0, #863027 0.08em 0.08em 0, #863027 0.09em 0.09em 0, #863027 0.1em 0.1em 0;\n}\na {\n  color: #f4f1de;\n}\np {\n  font-size: 1.2em;\n}\nfooter {\n  border-top: 0.12em solid #f4f1de;\n  padding-top: 2%;\n  margin-top: 3%;\n  display: block;\n  font-size: 0.8em;\n}\n.container {\n  width: 75%;\n  margin: 0 auto;\n}\n.download {\n  font-family: \"Arvo\", 'sans-serif';\n  text-align: left;\n  margin-bottom: 0px;\n}\n.download a {\n  text-decoration: none;\n}\n.download__link {\n  padding: 0.3em 0.8em;\n  background: url("+__webpack_require__(34)+") no-repeat;\n  -webkit-background-size: 100%;\n  -moz-background-size: 100%;\n  background-size: 100%;\n  margin-left: 0.4em;\n  -webkit-transition: margin 0.15s ease-out;\n  -moz-transition: margin 0.15s ease-out;\n  -o-transition: margin 0.15s ease-out;\n  -ms-transition: margin 0.15s ease-out;\n  transition: margin 0.15s ease-out;\n  text-decoration: none;\n}\n.download__link:hover {\n  color: #f4f1de;\n  margin-left: 0.6em;\n  margin-right: -0.2em;\n}\n", ""]);
 
 /***/ },
 /* 6 */
