@@ -4,6 +4,8 @@ This component is a port of the famous [fit text](http://fittextjs.com/) plugin 
 
 This component is 100% jQuery Free.
 
+Homepage: [http://softwarepsychonaut.com/react-fittext](http://softwarepsychonaut.com/react-fittext)
+
 ## Usage
 
 Simply wrap your text component inside <ReactFitText>
@@ -21,6 +23,7 @@ var ReactFitText = require('react-fittext');
 
 and you're good to go!
 
+If you want to see a live demo of this component, you can [check the homepage](http://softwarepsychonaut.com/react-fittext).
 ### Parameters
 
  If you can send the compressor attribute to the component to modify how the text adapts it size.
