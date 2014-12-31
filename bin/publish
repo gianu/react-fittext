@@ -11,7 +11,7 @@ if [[ ! ${git_status} =~ "working directory clean" ]]; then
 fi
 
 git fetch 2> /dev/null
-git checkougt gh-pages
+git checkout gh-pages
 git pull
 mv public/* .
 git add -A
