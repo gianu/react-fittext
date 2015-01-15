@@ -28,12 +28,12 @@ If you want to see a live demo of this component, you can [check the homepage](h
 ### Parameters
  There are few options you can send to the component to modify it default behaviour:
 
- * __compressor__: you can tweak this variable to increase / decrase the font-size. Default is 1.
+ * __compressor__: you can tweak this variable to increase / decrease the font-size. Default is 1.
  * __minFontSize__: the minimun font size (in px) this component should use.
  * __maxFontSize__: the maximum font size (in px) this component should use.
 
 ## Issues / PR
 
- If you found any issue with this componente, please [report it](https://github.com/gianu/react-fittext/issues).
+ If you found any issue with this component, please [report it](https://github.com/gianu/react-fittext/issues).
 
  If you want to improve the code, feel free to create a PR!
