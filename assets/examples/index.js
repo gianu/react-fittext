@@ -2,7 +2,7 @@
 require("../styles/index.styl");
 
 var React = require("react");
-var ReactFitText = require('../../src/ReactFitText');
+var ReactFitText = require('../../lib/ReactFitText');
 
 var Body = React.createClass({
   render: function() {
