@@ -37,3 +37,7 @@ If you want to see a live demo of this component, you can [check the homepage](h
  If you found any issue with this component, please [report it](https://github.com/gianu/react-fittext/issues).
 
  If you want to improve the code, feel free to create a PR!
+ 
+## Thanks
+* [KyleAMathews](https://github.com/KyleAMathews)
+* [revolunet](https://github.com/revolunet)
