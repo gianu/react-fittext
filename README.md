@@ -41,3 +41,4 @@ If you want to see a live demo of this component, you can [check the homepage](h
 ## Thanks
 * [KyleAMathews](https://github.com/KyleAMathews)
 * [revolunet](https://github.com/revolunet)
+* [poteto](https://github.com/poteto)
