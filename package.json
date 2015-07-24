@@ -1,6 +1,6 @@
 {
   "name": "react-fittext",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A React plugin to fit the text in the screen",
   "main": "lib/ReactFitText.js",
   "scripts": {
