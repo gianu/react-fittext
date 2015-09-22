@@ -2,6 +2,7 @@
 require("../styles/index.styl");
 
 var React = require("react");
+var ReactDOM = require("react-dom");
 var ReactFitText = require('../../lib/ReactFitText');
 
 var Body = React.createClass({
@@ -23,4 +24,4 @@ var Body = React.createClass({
 });
 
 
-React.render(<Body />, document.querySelector('.js-fittext'));
+ReactDOM.render(<Body />, document.querySelector('.js-fittext'));

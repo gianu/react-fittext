@@ -1,0 +1,6 @@
+node_modules/
+public/
+.DS_Store
+bin
+client
+gulpfile.js
