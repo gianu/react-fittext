@@ -3,9 +3,10 @@ require("../styles/index.styl");
 
 var React = require("react");
 var ReactDOM = require("react-dom");
+var createClass = require("create-react-class");
 var ReactFitText = require('../../lib/ReactFitText');
 
-var Body = React.createClass({
+var Body = createClass({
   render: function() {
     return <div id="react-root">
       <ReactFitText compressor={0.5}>
