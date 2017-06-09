@@ -3,9 +3,9 @@
 set -o nounset
 set -o errexit
 
-git_status="$(git status 2> /dev/null)"
+git_status="$(git status -z 2> /dev/null)"
 
-if [[ ! ${git_status} =~ "working directory clean" ]]; then
+if [[ ! -z ${git_status} ]]; then
   echo "You still have changes in your current branch. Commit everything before publishing."
   exit 1
 fi
