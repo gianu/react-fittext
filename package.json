@@ -1,11 +1,10 @@
 {
   "name": "react-fittext",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "A React plugin to fit the text in the screen",
   "main": "lib/ReactFitText.js",
   "scripts": {
     "build_client": "webpack -p --config ./client/webpack.config.js",
-    "test": "jest",
     "dev_install": "npm install && npm dedupe",
     "dev": "webpack --config ./client/webpack.config.js && webpack-dev-server --config ./client/webpack.config.js --inline --hot --content-base ./public"
   },
@@ -41,11 +40,11 @@
     "gulp-react": "^2.0.0",
     "gulp-util": "^3.0.1",
     "html-webpack-plugin": "^1.6.1",
-    "jest-cli": "^0.1.18",
     "nib": "^1.1.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "react-hot-loader": "^1.3.0",
     "run-sequence": "^1.0.2",
-    "sass-loader": "^0.3.0",
     "style-loader": "^0.12.4",
     "stylus": "^0.52.4",
     "stylus-loader": "^1.3.0",
@@ -53,8 +52,12 @@
     "webpack": "^1.4.7",
     "webpack-dev-server": "^1.6.5"
   },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
   "dependencies": {
-    "react": "^0.14.0-rc1",
-    "react-dom": "^0.14.0-rc1"
+    "create-react-class": "^15.5.3",
+    "prop-types": "^15.5.10"
   }
 }
