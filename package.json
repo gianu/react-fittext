@@ -59,6 +59,7 @@
     "react-dom": "^15.0.0"
   },
   "dependencies": {
+    "create-react-class": "^15.5.3",
     "prop-types": "^15.5.10"
   }
 }
