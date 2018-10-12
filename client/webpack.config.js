@@ -6,7 +6,7 @@ var Path = require("path"),
     webpackConfig,
 
     IS_PRODUCTION = "production" === process.env.NODE_ENV,
-    JSX_WITH_HOT_LOEADERS = ["react-hot-loader", "babel-loader?optional=runtime"],
+    JSX_WITH_HOT_LOEADERS = ["react-hot-loader/webpack", "babel-loader?optional=runtime"],
     CSS_LOADER = "style-loader!css-loader?root=../",
 
 webpackConfig = module.exports = {
