@@ -8,6 +8,10 @@
     "dev_install": "npm install && npm dedupe",
     "dev": "webpack --config ./client/webpack.config.js && webpack-dev-server --config ./client/webpack.config.js --inline --hot --content-base ./public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gianu/react-fittext.git"
+  },
   "keywords": [
     "react",
     "fittext",
